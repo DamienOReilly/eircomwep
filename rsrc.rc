@@ -1,0 +1,27 @@
+#include "\masm32\include\resource.h"
+
+#define IDD_KEYGEN   100
+
+#define IDC_GENERATE 402
+#define IDC_COPY     403
+#define IDC_EXIT     404
+#define IDC_SSID     405
+#define IDC_WEP      406
+#define IDC_INFO   407
+
+LANGUAGE 0, 0
+
+
+IDD_KEYGEN DIALOGEX 0, 0, 200, 78
+STYLE DS_CENTER | WS_MINIMIZEBOX | WS_CAPTION | WS_SYSMENU
+CAPTION "Eircom WEP Keygen - Damo"
+FONT 8, "Tahoma"
+BEGIN
+    LTEXT           "SSID:  eircom",IDC_STATIC,5,10,48,10
+    EDITTEXT        IDC_SSID,53,9,82,12,ES_AUTOHSCROLL | WS_BORDER
+    LTEXT           "WEP Key:",IDC_STATIC,5,31,37,10
+    EDITTEXT        IDC_WEP,54,28,138,12,ES_AUTOHSCROLL | ES_READONLY
+    DEFPUSHBUTTON   "&Generate",IDC_GENERATE,145,9,47,12,BS_FLAT
+    CTEXT           "Coded in Win32 ASM\nDamo",
+                    IDC_INFO,0,52,199,17
+END
